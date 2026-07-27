@@ -1,231 +1,66 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
+<div class="napthe-box">
+    <h2>🏆 NẠP THẺ</h2>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <select>
+        <option>Viettel</option>
+        <option>Vinaphone</option>
+        <option>Mobifone</option>
+    </select>
 
-<title>Bin GAG2 Shop</title>
+    <select>
+        <option>-- Chọn đúng mệnh giá. Sai mất thẻ --</option>
+        <option>10.000đ</option>
+        <option>20.000đ</option>
+        <option>50.000đ</option>
+        <option>100.000đ</option>
+        <option>200.000đ</option>
+        <option>500.000đ</option>
+    </select>
+
+    <input type="text" placeholder="Nhập mã thẻ">
+
+    <input type="text" placeholder="Nhập số serial">
+
+    <button>NẠP THẺ NGAY</button>
+</div>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:#f5f5f5;
-padding-bottom:70px;
+    background:#f5f5f5;
+    font-family:Arial,sans-serif;
 }
 
-
-header{
-background:#ff2f57;
-padding:15px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-color:white;
+.napthe-box{
+    max-width:420px;
+    margin:20px auto;
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-
-.header-btn a{
-background:white;
-color:#ff2f57;
-padding:8px 10px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-font-size:13px;
-margin-left:5px;
+.napthe-box h2{
+    margin-bottom:15px;
 }
 
-
-.avatar{
-width:40px;
-height:40px;
-border-radius:50%;
+.napthe-box select,
+.napthe-box input{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
 }
 
-
-
-.title{
-margin:20px;
-font-size:24px;
-font-weight:bold;
+.napthe-box button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:#ff2b2b;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
 }
-
-
-.menu{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-padding:15px;
-}
-
-
-.card{
-background:white;
-border-radius:15px;
-padding:15px;
-text-align:center;
-}
-
-
-.card button{
-background:#ff2f57;
-color:white;
-border:none;
-padding:10px;
-border-radius:10px;
-margin-top:10px;
-}
-
-
-.bottom{
-
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:white;
-display:flex;
-justify-content:space-around;
-padding:12px;
-box-shadow:0 -3px 10px #ccc;
-
-}
-
-
-.bottom a{
-
-text-decoration:none;
-color:#ff2f57;
-font-weight:bold;
-font-size:13px;
-
-}
-
-
 </style>
-
-</head>
-
-
-<body>
-
-
-<header>
-
-<h2>Bin GAG2 Shop</h2>
-
-
-<div class="header-btn" id="userArea">
-
-<a href="napthe.html">
-💳 Nạp card
-</a>
-
-
-<a href="login.html" id="loginBtn">
-🔐 Đăng nhập
-</a>
-
-
-</div>
-
-
-</header>
-
-
-
-<div class="title">
-DỊCH VỤ GAG2
-</div>
-
-
-<div class="menu">
-
-
-<div class="card">
-🌱 Hạt Giống VIP
-<br>
-<button>Xem tất cả</button>
-</div>
-
-
-<div class="card">
-🐾 Pet VIP
-<br>
-<button>Xem tất cả</button>
-</div>
-
-
-<div class="card">
-⚙️ Gear
-<br>
-<button>Xem tất cả</button>
-</div>
-
-
-<div class="card">
-💰 Sheckles
-<br>
-<button>Xem tất cả</button>
-</div>
-
-
-</div>
-
-
-
-
-<div class="bottom">
-
-<a href="napthe.html">
-💳 Nạp card
-</a>
-
-<a href="history-card.html">
-📜 Lịch sử nạp
-</a>
-
-<a href="history-buy.html">
-🛒 Lịch sử mua
-</a>
-
-</div>
-
-
-
-
-<script>
-
-let login = localStorage.getItem("login");
-
-if(login){
-
-document.getElementById("loginBtn").style.display="none";
-
-
-document.getElementById("userArea").innerHTML += `
-
-<a href="account.html">
-
-<img class="avatar" src="avatar.png">
-
-</a>
-
-`;
-
-}
-
-
-</script>
-
-
-</body>
-</html>
