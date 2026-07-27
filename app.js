@@ -6,74 +6,103 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 
-// ===== ĐĂNG KÝ =====
+// =================
+// ĐĂNG KÝ
+// =================
 
 const registerBtn = document.getElementById("registerBtn");
 
-if (registerBtn) {
+if(registerBtn){
 
-  registerBtn.onclick = () => {
+registerBtn.onclick = () => {
 
-    let email = document.getElementById("registerEmail").value;
-    let password = document.getElementById("registerPassword").value;
-    let password2 = document.getElementById("registerPassword2").value;
-
-
-    if (password !== password2) {
-      alert("Mật khẩu không trùng!");
-      return;
-    }
+let email = document.getElementById("registerEmail").value;
+let password = document.getElementById("registerPassword").value;
+let password2 = document.getElementById("registerPassword2").value;
 
 
-    createUserWithEmailAndPassword(auth, email, password)
+if(password !== password2){
 
-    .then(() => {
+alert("Mật khẩu nhập lại không đúng!");
+return;
 
-      alert("Đăng ký thành công!");
-      window.location.href = "login.html";
+}
 
-    })
 
-    .catch((error) => {
+createUserWithEmailAndPassword(auth,email,password)
 
-      alert(error.message);
+.then(()=>{
 
-    });
+alert("Đăng ký thành công!");
 
-  };
+window.location.href="login.html";
+
+})
+
+.catch(error=>{
+
+alert(error.message);
+
+});
+
+
+};
+
 
 }
 
 
 
-// ===== ĐĂNG NHẬP =====
+
+// =================
+// ĐĂNG NHẬP
+// =================
+
 
 const loginBtn = document.getElementById("loginBtn");
 
 
-if (loginBtn) {
+if(loginBtn){
 
-  loginBtn.onclick = () => {
-
-    let email = document.getElementById("loginEmail").value;
-    let password = document.getElementById("loginPassword").value;
+loginBtn.onclick = () => {
 
 
-    signInWithEmailAndPassword(auth, email, password)
+let email = document.getElementById("loginEmail").value;
 
-    .then(() => {
+let password = document.getElementById("loginPassword").value;
 
-      alert("Đăng nhập thành công!");
-      window.location.href = "index.html";
 
-    })
 
-    .catch((error) => {
+signInWithEmailAndPassword(auth,email,password)
 
-      alert(error.message);
 
-    });
+.then(()=>{
 
-  };
+
+// Lưu trạng thái đăng nhập
+
+localStorage.setItem("login","true");
+
+localStorage.setItem("email",email);
+
+
+
+alert("Đăng nhập thành công!");
+
+window.location.href="index.html";
+
+
+})
+
+
+.catch(error=>{
+
+alert(error.message);
+
+});
+
+
+};
+
 
 }
