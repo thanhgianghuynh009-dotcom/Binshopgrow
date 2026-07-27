@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nạp thẻ | Binshopgrow</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>💳 Nạp thẻ</h1>
+
+<h3>Chọn nhà mạng</h3>
+
+<select id="cardType">
+<option>Viettel</option>
+<option>Vinaphone</option>
+<option>Mobifone</option>
+<option>Vietnamobile</option>
+<option>Zing</option>
+<option>Gate</option>
+<option>Garena</option>
+</select>
+
+
+<h3>Chọn mệnh giá</h3>
+
+<select id="cardMoney">
+<option>10.000đ</option>
+<option>20.000đ</option>
+<option>30.000đ</option>
+<option>50.000đ</option>
+<option>100.000đ</option>
+<option>200.000đ</option>
+<option>300.000đ</option>
+<option>500.000đ</option>
+<option>1.000.000đ</option>
+</select>
+
+
+<p class="note">
+⚠️ Chọn đúng mệnh giá. Sai mất thẻ
+</p>
+
+
+<input id="seri" placeholder="Nhập số seri">
+
+<input id="code" placeholder="Nhập mã thẻ">
+
+
+<button onclick="napThe()">
+Nạp ngay
+</button>
+
+
+</div>
+
+
+<script>
+function napThe(){
+
+alert("Đã gửi yêu cầu nạp thẻ. Vui lòng chờ duyệt!");
+
+}
+</script>
+
+
+</body>
+</html>
